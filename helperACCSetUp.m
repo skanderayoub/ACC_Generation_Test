@@ -22,7 +22,7 @@ R           = 760;      % Radius of curvature for the road      (m)
 
 % Uncomment the following line and edit helperScenarioAuthoring to author
 % a new scenario 
-[scenario,egoVehicle] = helperScenarioAuthoring(R, true);
+%[scenario,egoVehicle] = helperScenarioAuthoring(R, true);
 
 %% Tracking and Sensor Fusion Parameters                        Units
 clusterSize = 4;        % Distance for clustering               (m)
@@ -63,7 +63,7 @@ G = helperACCLinearModel(m,Iz,lf,lr,Cf,Cr,tau,v0_ego);
 %% Automatic Cruise Control (ACC) Controller Parameters
 v_set           = 21.5; % ACC set speed                         (m/s)
 time_gap        = 1.5;  % ACC time gap                          (s)
-default_spacing = 5;    % ACC default spacing                   (m)
+default_spacing = 50;    % ACC default spacing                   (m)
 verr_gain       = 0.5;  % ACC velocity error gain               (N/A)
 xerr_gain       = 0.2;  % ACC spacing error gain                (N/A)
 vx_gain         = 0.4;  % ACC relative velocity gain            (N/A)
